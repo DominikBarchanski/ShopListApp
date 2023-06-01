@@ -10,11 +10,16 @@ import SwiftUI
 @main
 struct ShopListApp: App {
     let persistenceController = PersistenceController.shared
-
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @StateObject var userViewModel = UserViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-        }
+            if userViewModel.isUserLogged{
+                ContentView().environmentObject(userViewModel)
+            }else{
+                StartView(viewModel: userViewModel).environmentObject(userViewModel)
+            }
+            
+                }
     }
 }
