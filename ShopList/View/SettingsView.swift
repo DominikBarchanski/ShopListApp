@@ -31,15 +31,15 @@ struct SettingsView: View {
                     }
                 }
                 
-                Toggle(isOn: $userViewModel.settings.colorBlindMode) {
-                    CustomText("Enable color blind mode")
-                }
-                .accessibilityLabel("Enable color blind mode")
+//                Toggle(isOn: $userViewModel.settings.colorBlindMode) {
+//                    CustomText("Enable color blind mode")
+//                }
+//                .accessibilityLabel("Enable color blind mode")
                 
-                Toggle(isOn: $userViewModel.settings.voiceOverMode) {
-                    CustomText("Enable voice over mode")
-                }
-                .accessibilityLabel("Enable voice over mode")
+//                Toggle(isOn: $userViewModel.settings.voiceOverMode) {
+//                    CustomText("Enable voice over mode")
+//                }
+//                .accessibilityLabel("Enable voice over mode")
                 
                 Toggle(isOn: $userViewModel.settings.fontSizeMode) {
                     CustomText("Enable font size mode")
